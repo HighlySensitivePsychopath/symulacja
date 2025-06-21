@@ -73,8 +73,11 @@ class Environment {
     }
 
     updateSpawn() {
+        const carCount = this.gui.carCountSlider.value();
         if (millis() - this.lastSpawnTime > this.spawnInterval) {
-            this.spawnCar();
+            for(let i =0; i<carCount; i++){
+                this.spawnCar();
+            }
             this.lastSpawnTime = millis();
         }
     }
