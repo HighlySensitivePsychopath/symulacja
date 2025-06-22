@@ -111,7 +111,8 @@ class Environment {
     }
 
     draw() {
-        background(50);
+        const bgColor=this.gui.bgColorSlider.value();
+        background(bgColor);
         this.drawRoads();
         this.drawIntersections();
         this.drawCars();
@@ -123,8 +124,9 @@ class Environment {
         const spacingX = this.width / (2 * n + 1);
         const spacingY = this.height / (2 * n + 1);
 
-        // Tło jezdni
-        fill(80);
+        // Kolor jezdni
+        const rdColo=this.gui.rdColorSlider.value();
+        fill(rdColo);
         noStroke();
 
         // Poziome jezdnie
