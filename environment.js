@@ -64,9 +64,9 @@ class Environment {
                 car.pos.y > -50 &&
                 car.pos.y < this.height + 50;
         });
-
+        const spdMult = this.gui.carSpeedSlider.value();
         this.cars.forEach(car => {
-            car.update();
+            car.update(spdMult);
             car.checkLights(this.intersections);
             car.checkCars(this.cars);
         });
@@ -105,9 +105,9 @@ class Environment {
             x = roadX + laneOffset;
             y = direction === HALF_PI ? -20 : height + 20;
         }
-
+        const speedMult = this.gui.carSpeedSlider.value();
         // console.log(`Spawning car at (${x}, ${y}) direction: ${direction}`);
-        this.cars.push(new Car(x, y, direction));
+        this.cars.push(new Car(x, y, direction, speedMult));
     }
 
     draw() {

@@ -1,8 +1,9 @@
+
 class Car {
-  constructor(x, y, direction) {
+  constructor(x, y, direction, sMult) {
     this.pos = createVector(x, y);
     this.direction = direction;
-    this.speed = random(2,5);
+    this.speed = random(2,5)*sMult;
     this.vel = p5.Vector.fromAngle(direction).mult(this.speed);
     this.size = 15;
     this.color = color(random(150, 255), random(150, 255), random(150, 255));
