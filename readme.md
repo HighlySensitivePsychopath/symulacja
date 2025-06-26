@@ -10,3 +10,6 @@ Najważniejsze funkcjonalności zostały zaimplementowane, a elementy symulacji 
 - średnia prędkość kolejno generowanych pojazdów.
 
 Symulacja oferuje również manualną zmianę świateł z czerwonych na zielone poprzez kliknięcie, gdzie po kliknięciu następuje stopniowa zmiana na żółte. Dodatkowo, światła zmieniają się cyklicznie, co kilka sekund.
+
+Link do symulacji 
+https://highlysensitivepsychopath.github.io/symulacja/
